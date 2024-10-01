@@ -12,3 +12,6 @@ Route::get('/destinos', [DestinoController::class, 'index'])->name('destinos.ind
 
 // Ruta para mostrar los detalles de un destino específico
 Route::get('/destinos/{id}', [DestinoController::class, 'show'])->name('destinos.show');
+
+
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
