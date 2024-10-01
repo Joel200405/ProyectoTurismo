@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Destinos</title>
-</head>
-<body>
+@extends('layouts.general')
+
+@section('title', 'Lista de Destinos') <!-- Título personalizado -->
+
+@section('content') <!-- Sección de contenido dinámico -->
     <h1>Destinos</h1>
     <ul>
         @foreach($destinos as $destino)
@@ -14,5 +11,4 @@
             </li>
         @endforeach
     </ul>
-</body>
-</html>
+@endsection
