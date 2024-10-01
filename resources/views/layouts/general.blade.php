@@ -11,40 +11,25 @@
     <!-- Fuentes y scripts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Estilos específicos -->
-    <style>
-        header {
-            background-color: #005f8d;
-            color: #000000;
-            padding: 15px;
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-        }
-        .header-nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            font-weight: bold;
-        }
-        .header-contact {
-            margin-top: 10px;
-            font-size: 0.9em;
-        }
-    </style>
+    
 </head>
 <body>
     
     <!-- Encabezado -->
     <header>
-        <nav class="header-nav">
-            <a href="#">Destinos</a>
-            <a href="#">Reservas</a>
-        </nav>
-        <div class="header-contact">
-            <p>Ubicación: Universidad Continental</p>
-            <p>Teléfono: +51 123 456 789</p>
-            <p>Email: grupo01@continental.edu.pe</p>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+        <link rel="stylesheet" href="{{ asset('css1/style.css') }}">
+
+        <div class="header">
+            <div class="logo">Destinos Turisticos</div>
+            <ul class="menu">
+                <li>Inicio</li>
+                <li>Destinos Turisticos</li>
+                <li><a href="#">Reservas</a></li>
+                <li>login</li>
+            </ul>
+
         </div>
     </header>
 
