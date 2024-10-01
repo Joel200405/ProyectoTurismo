@@ -49,9 +49,9 @@
     </header>
 
     <!-- Contenido dinámico -->
-    <main>
-        @yield('content')
-    </main>
+    
+    @yield('content')
+    
 
     <!-- Pie de página -->
     <footer class="footer">
