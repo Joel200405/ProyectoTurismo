@@ -1,8 +1,8 @@
 @extends('layouts.general')
 
-@section('title', 'Lista de Destinos') <!-- Título personalizado -->
+@section('title', 'Lista de Destinos')
 
-@section('content') <!-- Sección de contenido dinámico -->
+@section('content')
     <h1>Destinos</h1>
     <ul>
         @foreach($destinos as $destino)
