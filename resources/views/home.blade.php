@@ -1,5 +1,7 @@
 @extends('layouts.general')
 
 @section('content')
-    <h1>sdjhbsd</h1>
+    <div>
+        <h1>sjdbhnsdmg</h1>
+    </div>
 @endsection
