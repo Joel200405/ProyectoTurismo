@@ -9,6 +9,121 @@ svg{
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+}
+
+.destinos{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/*Estilos base para cada grid*/
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+/*Estilos para cada elemento del grid*/
+.destino{
+    position: relative;
+    overflow: hidden;
+    
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.destino:hover img{
+    transform: scale(1.1);
+}
+
+.destino img{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.destino h2{
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Efecto la pasar el cursos */
+.info-hover{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2ad67b;
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-hover h3{
+    font-size: 24px;
+    margin: 0;
+}
+
+.info-hover p{
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.destino:hover .info-hover{
+    transform: translateY(0);
+}
+
+/*Boton "Reservar ahora"*/
+button {
+    background-color: #972ad6;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0509f1e7;
+}
+
+/* Estilo del botón en la parte inferior del grid */
+.reserve-button {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px; /*añadir argen infoerior si es necesario*/
+}
+
 .header{
     background-image: url(../css1/img-login/home_bg.webp);
     background-size: cover;
@@ -28,6 +143,19 @@ svg{
     position: relative;
     z-index: 100;
 }
+
+/* Superposición semitransparente para oscurecer la imagen */
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro semitransparente */
+    z-index: -1; /* Mantiene el overlay detrás del contenido */
+}
+
 .header .logo{
     font-weight: bold;
     margin-left: 8em;
