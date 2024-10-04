@@ -9,8 +9,8 @@ use App\Http\Controllers\loginController;
 use App\Http\Controllers\ReservasController;
 
 
-Route::get('/login', [loginController::class, 'indexLogin']);
-Route::get('/home', [homeController::class, 'index']);
+Route::get('/login', [loginController::class, 'indexLogin'])->name('login.index');
+Route::get('/home', [homeController::class, 'index'])->name('home.index');
 
 
 Route::get('/destinos', [DestinoController::class, 'index'])->name('destinos.index');
