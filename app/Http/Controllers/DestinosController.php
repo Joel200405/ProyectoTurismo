@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Destino;
 
-class DestinoController extends Controller
+class DestinosController extends Controller
 {
     // Método para mostrar la lista de destinos
     public function index()

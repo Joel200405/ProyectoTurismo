@@ -2,7 +2,7 @@
 
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DestinoController;
+use App\Http\Controllers\DestinosController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\loginController;
@@ -12,12 +12,12 @@ use App\Http\Controllers\ReservasController;
 Route::get('/login', [loginController::class, 'indexLogin'])->name('login.index');
 Route::get('/home', [homeController::class, 'index'])->name('home.index');
 
-
-Route::get('/destinos', [DestinoController::class, 'index'])->name('destinos.index');
-
-Route::get('/destinos/{id}', [DestinoController::class, 'show'])->name('destinos.show');
-
-Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
+//Destinos
+Route::controller(DestinosController::class)->group(function() {
+    Route::get('/destinos', 'index')->name('destinos.index');
+    Route::get('/destinos/{id}', 'show')->name('destinos.show');
+    Route::get('/contact', 'submit')->name('contact.submit');
+});
 
 //Reservas
 Route::controller(ReservasController::class)->group(function(){
