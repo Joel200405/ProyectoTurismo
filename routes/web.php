@@ -9,7 +9,9 @@ use App\Http\Controllers\loginController;
 use App\Http\Controllers\ReservasController;
 
 
-Route::get('/login', [loginController::class, 'indexLogin'])->name('login.index');
+Route::get('/login', [loginController::class, 'index'])->name('login.index');
+Route::post('/login', [loginController::class, 'validateLogin'])->name('login.validate');
+
 Route::get('/home', [homeController::class, 'index'])->name('home.index');
 
 //Destinos
@@ -24,4 +26,3 @@ Route::controller(ReservasController::class)->group(function(){
     Route::get('reservas/create', 'createReserva')->name('reservas.create');
     Route::get('reservas/index', 'index')->name('reservas.index');
 });
-
