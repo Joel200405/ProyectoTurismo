@@ -2,24 +2,9 @@
 
 @section('title', 'Index reserva ')
 
-@section('header')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-
-    <link rel="stylesheet" href="{{ asset('css1/style.css') }}">
-
-    <div class="header">
-        <div class="logo">Destinos Turisticos</div>
-        <ul class="menu">
-            <li>Inicio</li>
-            <li><a href="{{ route('destinos.index') }}">Destinos Turisticos</a></li>
-            <li><a href="{{ route('reservas.index') }}">Reservas</a></li>
-            <li>login</li>
-        </ul>
-
-    </div>
-    
-@endsection
+<link rel="stylesheet" href="{{ asset('css1/style.css') }}">
 
 @section('content')
 

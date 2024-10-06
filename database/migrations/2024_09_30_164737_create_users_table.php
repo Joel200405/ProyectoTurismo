@@ -14,12 +14,14 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 100);
-            $table->string('email', 100)->unique();
+            $table->string('username', 50)->unique();
             $table->string('password', 255);
-            $table->string('telefono', 15);
-            $table->string('direccion', 255);
             $table->string('google_id')->nullable();
+
+            // Agregar la columna para distinguir entre usuario normal y administrador
+            $table->boolean('is_admin')->default(false);  // false = usuario normal, true = administrador
             $table->timestamps();
+
         });
     }
 

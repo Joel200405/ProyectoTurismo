@@ -8,10 +8,21 @@
     <!-- favicon -->
     
     <!-- estilos -->
+    
+
 </head>
 <body>
     <!-- header -->
-    @yield('header')
+    <header class="header">
+        <div class="logo">Destinos Turisticos</div>
+        <ul class="menu">
+            <li><a href="{{ route('home.index') }}">Inicio</a></li>
+            <li><a href="{{ route('destinos.index') }}">Destinos Turisticos</a></li>
+            <li><a href="{{ route('reservas.index') }}">Reservas</a></li>
+            <li><a href="{{ route('login.index') }}">Login</a></li>
+        </ul>
+    </header>
+
     <!-- nav -->
     <!-- content -->
     @yield('content')
