@@ -12,7 +12,7 @@
     <!-- list Items -->
     <div class="list">
         <div class="item active">
-            <img src="{{ asset('css1/img/img1.png') }}">
+            <img src="{{ asset('css1/img/t1.jpg') }}">
             <div class="content">
                 <p>Tour</p>
                 <h3>Destino turistico 1</h3>
@@ -23,9 +23,9 @@
             </div>
         </div>
         <div class="item">
-            <img src="{{ asset('css1/img/img2.jpg') }}">
+            <img src="{{ asset('css1/img/t2.jpg') }}">
             <div class="content">
-                <p>design</p>
+                <p>Tour</p>
                 <h3>Destino turistico 2</h3>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
@@ -34,9 +34,9 @@
             </div>
         </div>
         <div class="item">
-            <img src="{{ asset('css1/img/img3.jpg') }}">
+            <img src="{{ asset('css1/img/t3.jpg') }}">
             <div class="content">
-                <p>design</p>
+                <p>Tour</p>
                 <h3>Destino turistico 3</h3>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
@@ -45,9 +45,9 @@
             </div>
         </div>
         <div class="item">
-            <img src="{{ asset('css1/img/img4.jpg') }}">
+            <img src="{{ asset('css1/img/t4.jpg') }}">
             <div class="content">
-                <p>design</p>
+                <p>Tour</p>
                 <h3>Destino turistico 4</h3>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="item">
-            <img src="{{ asset('css1/img/img5.jpg') }}">
+            <img src="{{ asset('css1/img/t5.jpg') }}">
             <div class="content">
                 <p>design</p>
                 <h3>Destino turistico 5</h3>
@@ -75,31 +75,31 @@
     <!-- thumbnail -->
     <div class="thumbnail">
         <div class="item active">
-            <img src="{{ asset('css1/img/img1.png') }}">
+            <img src="{{ asset('css1/img/t1.jpg') }}">
             <div class="content">
                 Name Slider
             </div>
         </div>
         <div class="item">
-            <img src="{{ asset('css1/img/img2.jpg') }}">
+            <img src="{{ asset('css1/img/t2.jpg') }}">
             <div class="content">
                 Name Slider
             </div>
         </div>
         <div class="item">
-            <img src="{{ asset('css1/img/img3.jpg') }}">
+            <img src="{{ asset('css1/img/t3.jpg') }}">
             <div class="content">
                 Name Slider
             </div>
         </div>
         <div class="item">
-            <img src="{{ asset('css1/img/img4.jpg') }}">
+            <img src="{{ asset('css1/img/t4.jpg') }}">
             <div class="content">
                 Name Slider
             </div>
         </div>
         <div class="item">
-            <img src="{{ asset('css1/img/img5.jpg') }}">
+            <img src="{{ asset('css1/img/t5.jpg') }}">
             <div class="content">
                 Name Slider
             </div>
@@ -110,13 +110,13 @@
 <section>
     <h2>Destinos Populares</h2>
     <div class="popular-content">
-        <img src="{{ asset('css1/img/g1.jpg') }}" alt="">
-        <img src="{{ asset('css1/img/g2.jpg') }}" alt="">
-        <img src="{{ asset('css1/img/g3.jpg') }}" alt="">
-        <img src="{{ asset('css1/img/g4.jpg') }}" alt="">
-        <img src="{{ asset('css1/img/g5.jpg') }}" alt="">
-        <img src="{{ asset('css1/img/g6.jpg') }}" alt="">
-        <img src="{{ asset('css1/img/g7.jpg') }}" alt="">
+        <img src="{{ asset('css1/img/t6.jpg') }}" alt="">
+        <img src="{{ asset('css1/img/t7.jpg') }}" alt="">
+        <img src="{{ asset('css1/img/t8.jpg') }}" alt="">
+        <img src="{{ asset('css1/img/t9.jpg') }}" alt="">
+        <img src="{{ asset('css1/img/t10.jpg') }}" alt="">
+        <img src="{{ asset('css1/img/t11.jpg') }}" alt="">
+        <img src="{{ asset('css1/img/t12.jpg') }}" alt="">
     </div>
 </section>
 
@@ -126,9 +126,9 @@
 
     <div class="product-content">
         <div class="product-1">
-            <img src="{{ asset('css1/img/l1.jpg') }}" alt="">
+            <img src="{{ asset('css1/img/t13.jpg') }}" alt="">
             <div class="producto-txt">
-                <h3>juego lorem</h3>
+                <h3>LAGUNA DE HUASCACOCHA</h3>
                 <div class="price">
                     <p>$500</p>
                     <a href="{{ route('reservas.create') }}" class="btn-2">Contratar</a>
@@ -137,9 +137,9 @@
         </div>
 
         <div class="product-1">
-            <img src="{{ asset('css1/img/l2.jpg') }}" alt="">
+            <img src="{{ asset('css1/img/t14.jpg') }}" alt="">
             <div class="producto-txt">
-                <h3>juego lorem</h3>
+                <h3>BAÑOS TERMALES DE COLLPA</h3>
                 <div class="price">
                     <p>$500</p>
                     <a href="#" class="btn-2">Contratar</a>
@@ -148,9 +148,9 @@
         </div>
 
         <div class="product-1">
-            <img src="{{ asset('css1/img/l3.jpg') }}" alt="">
+            <img src="{{ asset('css1/img/t15.jpg') }}" alt="">
             <div class="producto-txt">
-                <h3>juego lorem</h3>
+                <h3>MARCAMARCÁN</h3>
                 <div class="price">
                     <p>$500</p>
                     <a href="#" class="btn-2">Contratar</a>
@@ -159,9 +159,9 @@
         </div>
 
         <div class="product-1">
-            <img src="{{ asset('css1/img/l4.jpg') }}" alt="">
+            <img src="{{ asset('css1/img/t16.jpg') }}" alt="">
             <div class="producto-txt">
-                <h3>juego lorem</h3>
+                <h3>RESTOS ARQUEOLOGICOS DE COLCAS</h3>
                 <div class="price">
                     <p>$500</p>
                     <a href="#" class="btn-2">Contratar</a>
@@ -170,9 +170,9 @@
         </div>
 
         <div class="product-1">
-            <img src="{{ asset('css1/img/l5.jpg') }}" alt="">
+            <img src="{{ asset('css1/img/t5.jpg') }}" alt="">
             <div class="producto-txt">
-                <h3>juego lorem</h3>
+                <h3>LA TORTUGA DE QUILLAWAY</h3>
                 <div class="price">
                     <p>$500</p>
                     <a href="#" class="btn-2">Contratar</a>
@@ -181,9 +181,9 @@
         </div>
 
         <div class="product-1">
-            <img src="{{ asset('css1/img/l6.jpg') }}" alt="">
+            <img src="{{ asset('css1/img/t8.jpg') }}" alt="">
             <div class="producto-txt">
-                <h3>juego lorem</h3>
+                <h3>LAGUNAS DE PURICOCHA</h3>
                 <div class="price">
                     <p>$500</p>
                     <a href="#" class="btn-2">Comprar</a>
@@ -192,9 +192,9 @@
         </div>
 
         <div class="product-1">
-            <img src="{{ asset('css1/img/l7.jpg') }}" alt="">
+            <img src="{{ asset('css1/img/t9.jpg') }}" alt="">
             <div class="producto-txt">
-                <h3>juego lorem</h3>
+                <h3>LA BELLA DURMIENTE</h3>
                 <div class="price">
                     <p>$500</p>
                     <a href="#" class="btn-2">Comprar</a>
@@ -203,9 +203,9 @@
         </div>
 
         <div class="product-1">
-            <img src="{{ asset('css1/img/l8.jpg') }}" alt="">
+            <img src="{{ asset('css1/img/t3.jpg') }}" alt="">
             <div class="producto-txt">
-                <h3>juego lorem</h3>
+                <h3>CERRO DE SANTA CLARA</h3>
                 <div class="price">
                     <p>$500</p>
                     <a href="#" class="btn-2">Comprar</a>
@@ -214,9 +214,9 @@
         </div>
 
         <div class="product-1">
-            <img src="{{ asset('css1/img/l9.jpg') }}" alt="">
+            <img src="{{ asset('css1/img/t10.jpg') }}" alt="">
             <div class="producto-txt">
-                <h3>juego lorem</h3>
+                <h3>LAGUNA DE TUCTOCOCHA</h3>
                 <div class="price">
                     <p>$500</p>
                     <a href="#" class="btn-2">Comprar</a>

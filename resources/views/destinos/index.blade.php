@@ -30,7 +30,7 @@
                 <div class="card">
                     <img src="{{ asset('css1/img/img4.jpg') }}" alt="Destino 3">
                     <div class="card-info">
-                        <h2>Baños Termomedicinales de Collpa</h2>
+                        <h2>Baños termomedicinales de Carhucayan</h2>
                         <p>Esta situado al oeste de Carhuacayán, a 3.5 kms, aguas de diferentes temperaturas</p>
                         <a href="#" class="reserve-button">Reservar</a>
                     </div>
