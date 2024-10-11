@@ -14,7 +14,9 @@
 <body>
     <!-- header -->
     <header class="header">
-        <div class="logo">Destinos Turisticos</div>
+        <!--<div class="logo">
+            <img src="{{ asset('css1/img-login/logoCarhucayan.webp') }}" alt="logo">
+        </div> -->
         <ul class="menu">
             <li><a href="{{ route('home.index') }}">Inicio</a></li>
             <li><a href="{{ route('destinos.index') }}">Destinos Turisticos</a></li>

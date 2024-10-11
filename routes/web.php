@@ -1,11 +1,11 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DestinosController;
 use App\Http\Controllers\homeController;
+use App\Http\Controllers\DestinosController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ReservasController;
 
 
@@ -28,3 +28,7 @@ Route::controller(ReservasController::class)->group(function(){
     Route::get('reservas/create', 'createReserva')->name('reservas.create');
     Route::get('reservas/index', 'index')->name('reservas.index');
 });
+
+//login
+Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
+Route::post('/register', [RegisterController::class, 'store'])->name('register.store');

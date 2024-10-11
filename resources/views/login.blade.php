@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="register">
-                    <span>Don't have an account? <a href="#">Register</a> </span>
+                    <span>Don't have an account? <a href="{{ route('register.index') }}">Register</a> </span>
                 </div>
             </form>
 

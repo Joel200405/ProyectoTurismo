@@ -125,19 +125,15 @@ button:hover {
 }
 
 .header{
-    background-image: url(../css1/img-login/home_bg.webp);
+    background-image: url(../css1/img-login/homeFondo.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 500px;
+    height: 350px;
     margin: 0 auto;
     display: flex;
     max-width: 100%;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    grid-template-rows: 50px;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -157,10 +153,26 @@ button:hover {
 }
 
 .header .logo{
-    font-weight: bold;
     margin-left: 8em;
-    margin-top: 5em;
+    margin-top: 10em;
 }
+
+.header .logo img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 4px solid whitesmoke;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+}
+
+.header .logo img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
 .header .menu{
     padding: 0;
     margin: 0;
@@ -169,17 +181,19 @@ button:hover {
     justify-content: center;
     gap: 20px;
     font-weight: 500;
+    margin-top: -250px;
 }
 
 .header .menu li a{
-    color: inherit;
+    color: #a2dd33;
+    font-weight: bold;
+    border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    
 }
 
+
 .menu li {
-    
     padding: 10px 15px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }

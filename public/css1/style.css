@@ -13,7 +13,7 @@ svg{
     width: 1200px;
     max-width: 90%;
     margin: auto;
-    display: grid;
+    display: flex;
     grid-template-columns: 50px 1fr 50px;
     grid-template-rows: 50px;
     justify-content: center;
@@ -21,9 +21,12 @@ svg{
     position: relative;
     z-index: 100;
 }
-.header .logo{
-    font-weight: bold;
+
+.header .menu a{
+    color: #ff5a2c;
+    font-size: 16px;
 }
+
 .header .menu{
     padding: 0;
     margin: 0;
@@ -52,7 +55,7 @@ svg{
     border-radius: 5px;
 }
 
-
+/* *************************************************** */
 /* css slider */
 .slider{
     height: 140vh;
@@ -213,6 +216,15 @@ svg{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
+    justify-items: center;
+}
+
+.product-1 img{
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .btn-2{

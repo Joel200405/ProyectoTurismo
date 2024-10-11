@@ -14,10 +14,11 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         // Crear usuario normal
+        //php artisan db:seed --class=UserSeeder
         User::create([
             'nombre' => 'Usuario Normal',
             'username' => 'steven',
-            'password' => bcrypt('123'),
+            'password' => bcrypt('123456'),
             'is_admin' => false,
         ]);
 
@@ -25,7 +26,7 @@ class UserSeeder extends Seeder
         User::create([
             'nombre' => 'admin',
             'username' => 'luis',
-            'password' => bcrypt('123'),
+            'password' => bcrypt('123456'),
             'is_admin' => true,
         ]);
     }
