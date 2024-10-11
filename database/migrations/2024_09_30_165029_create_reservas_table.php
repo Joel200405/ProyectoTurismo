@@ -13,10 +13,17 @@ return new class extends Migration
     {
         Schema::create('reservas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('destino_id')->constrained()->onDelete('cascade');
-            $table->date('fecha_reserva');
+            
+            $table->string('nombre');
+            $table->string('email');
+            $table->string('telefono');
+            $table->foreignId('destino_id')->constrained();
+            $table->foreignId('user_id')->constrained('users');
+            $table->date('fecha');
+            $table->integer('personas');
+            $table->text('comentarios')->nullable();
             $table->string('estado', 50)->default('pendiente');
+            
             $table->timestamps();
         });
     }

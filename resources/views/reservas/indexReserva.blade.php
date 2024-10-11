@@ -122,107 +122,112 @@
 
 <main class="product container">
 
-    <h2>Todos los Destinos turisticos</h2>
+    <h2>PAQUETES DE TURISMO</h2>
 
     <div class="product-content">
-        <div class="product-1">
-            <img src="{{ asset('css1/img/t13.jpg') }}" alt="">
-            <div class="producto-txt">
-                <h3>LAGUNA DE HUASCACOCHA</h3>
-                <div class="price">
-                    <p>$500</p>
-                    <a href="{{ route('reservas.create') }}" class="btn-2">Contratar</a>
+        @foreach ($destinos as $destino)
+            
+            <div class="product-1">
+                <img src="{{ asset('css1/img/t13.jpg') }}" alt="">
+                <div class="producto-txt">
+                    <h3> {{ $destino->nombre }} </h3>
+                    <div class="price">
+                        <p> {{ $destino->precio }} </p>
+                        <a href="{{ route('reservas.create', $destino->id) }}" class="btn-2">Contratar</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="product-1">
-            <img src="{{ asset('css1/img/t14.jpg') }}" alt="">
-            <div class="producto-txt">
-                <h3>BAÑOS TERMALES DE COLLPA</h3>
-                <div class="price">
-                    <p>$500</p>
-                    <a href="#" class="btn-2">Contratar</a>
+            <div class="product-1">
+                <img src="{{ asset('css1/img/t14.jpg') }}" alt="">
+                <div class="producto-txt">
+                    <h3>BAÑOS TERMALES DE COLLPA</h3>
+                    <div class="price">
+                        <p>$500</p>
+                        <a href="#" class="btn-2">Contratar</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="product-1">
-            <img src="{{ asset('css1/img/t15.jpg') }}" alt="">
-            <div class="producto-txt">
-                <h3>MARCAMARCÁN</h3>
-                <div class="price">
-                    <p>$500</p>
-                    <a href="#" class="btn-2">Contratar</a>
+            <div class="product-1">
+                <img src="{{ asset('css1/img/t15.jpg') }}" alt="">
+                <div class="producto-txt">
+                    <h3>MARCAMARCÁN</h3>
+                    <div class="price">
+                        <p>$500</p>
+                        <a href="#" class="btn-2">Contratar</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="product-1">
-            <img src="{{ asset('css1/img/t16.jpg') }}" alt="">
-            <div class="producto-txt">
-                <h3>RESTOS ARQUEOLOGICOS DE COLCAS</h3>
-                <div class="price">
-                    <p>$500</p>
-                    <a href="#" class="btn-2">Contratar</a>
+            <div class="product-1">
+                <img src="{{ asset('css1/img/t16.jpg') }}" alt="">
+                <div class="producto-txt">
+                    <h3>RESTOS ARQUEOLOGICOS DE COLCAS</h3>
+                    <div class="price">
+                        <p>$500</p>
+                        <a href="#" class="btn-2">Contratar</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="product-1">
-            <img src="{{ asset('css1/img/t5.jpg') }}" alt="">
-            <div class="producto-txt">
-                <h3>LA TORTUGA DE QUILLAWAY</h3>
-                <div class="price">
-                    <p>$500</p>
-                    <a href="#" class="btn-2">Contratar</a>
+            <div class="product-1">
+                <img src="{{ asset('css1/img/t5.jpg') }}" alt="">
+                <div class="producto-txt">
+                    <h3>LA TORTUGA DE QUILLAWAY</h3>
+                    <div class="price">
+                        <p>$500</p>
+                        <a href="#" class="btn-2">Contratar</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="product-1">
-            <img src="{{ asset('css1/img/t8.jpg') }}" alt="">
-            <div class="producto-txt">
-                <h3>LAGUNAS DE PURICOCHA</h3>
-                <div class="price">
-                    <p>$500</p>
-                    <a href="#" class="btn-2">Comprar</a>
+            <div class="product-1">
+                <img src="{{ asset('css1/img/t8.jpg') }}" alt="">
+                <div class="producto-txt">
+                    <h3>LAGUNAS DE PURICOCHA</h3>
+                    <div class="price">
+                        <p>$500</p>
+                        <a href="#" class="btn-2">Comprar</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="product-1">
-            <img src="{{ asset('css1/img/t9.jpg') }}" alt="">
-            <div class="producto-txt">
-                <h3>LA BELLA DURMIENTE</h3>
-                <div class="price">
-                    <p>$500</p>
-                    <a href="#" class="btn-2">Comprar</a>
+            <div class="product-1">
+                <img src="{{ asset('css1/img/t9.jpg') }}" alt="">
+                <div class="producto-txt">
+                    <h3>LA BELLA DURMIENTE</h3>
+                    <div class="price">
+                        <p>$500</p>
+                        <a href="#" class="btn-2">Comprar</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="product-1">
-            <img src="{{ asset('css1/img/t3.jpg') }}" alt="">
-            <div class="producto-txt">
-                <h3>CERRO DE SANTA CLARA</h3>
-                <div class="price">
-                    <p>$500</p>
-                    <a href="#" class="btn-2">Comprar</a>
+            <div class="product-1">
+                <img src="{{ asset('css1/img/t3.jpg') }}" alt="">
+                <div class="producto-txt">
+                    <h3>CERRO DE SANTA CLARA</h3>
+                    <div class="price">
+                        <p>$500</p>
+                        <a href="#" class="btn-2">Comprar</a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="product-1">
-            <img src="{{ asset('css1/img/t10.jpg') }}" alt="">
-            <div class="producto-txt">
-                <h3>LAGUNA DE TUCTOCOCHA</h3>
-                <div class="price">
-                    <p>$500</p>
-                    <a href="#" class="btn-2">Comprar</a>
+            <div class="product-1">
+                <img src="{{ asset('css1/img/t10.jpg') }}" alt="">
+                <div class="producto-txt">
+                    <h3>LAGUNA DE TUCTOCOCHA</h3>
+                    <div class="price">
+                        <p>$500</p>
+                        <a href="#" class="btn-2">Comprar</a>
+                    </div>
                 </div>
             </div>
-        </div>
+        
+
+        @endforeach
 
     </div>
 </main>

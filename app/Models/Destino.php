@@ -15,6 +15,7 @@ class Destino extends Model
         'ubicacion',
         'precio',
         'imagen_url',
+        'popular',
     ];
 
     //Creando método protegido

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.header{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header .menu a{
+    color: #ff5a2c;
+    font-size: 16px;
+}
+
+.header .menu{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 500;
+}
+
+.header .menu li a{
+    color: inherit;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    
+}
+
+.menu li {
+    
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.menu li:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+/*CRAER RESERVA*/
+/*Poppins font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #c6c3c3;
+    --second-color: #ffffff;
+    --black-color: #000000;
+}
+
+body {
+    background-image: url("../css1/img-login/bg_login.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-top: 80px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+
+    width: 100%;
+    max-width: 450px;
+    backdrop-filter: blur(25px);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 4em 2.5em;
+    color: var(--second-color);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    margin: 100px auto;
+    max-width: 1200px;
+    
+}
+
+.info-adicional {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    max-width: 450px;
+    backdrop-filter: blur(25px);
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+    padding: 4em 2.5em;
+    color: var(--second-color);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+    
+}
+
+input, textarea, select {
+    
+    margin-top: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}
+
+.alert {
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    margin-bottom: 15px;
+    border: 1px solid #c3e6cb;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 0.75em;
+    border-radius: 30px;
+    border: 2px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--second-color);
+    margin-bottom: 1.5em;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    border-color: aquamarine;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 0.75em;
+    border: none;
+    border-radius: 30px;
+    background-color: #ececec;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: aquamarine;
+}

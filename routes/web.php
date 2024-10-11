@@ -9,9 +9,11 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ReservasController;
 
 
+//Rutas del login
 Route::get('/login', [loginController::class, 'index'])->name('login.index');
 Route::post('/login', [loginController::class, 'validateLogin'])->name('login.validate');
 
+//Rutas del home
 Route::get('/home', [homeController::class, 'index'])->name('home.index');
 
 //Destinos
@@ -21,11 +23,13 @@ Route::controller(DestinosController::class)->group(function() {
     Route::get('/contact', 'submit')->name('contact.submit');
 });
 
+//Ruta de contacto
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
 //Reservas
 Route::controller(ReservasController::class)->group(function(){
-    Route::get('reservas/create', 'createReserva')->name('reservas.create');
+    Route::get('/reservas/crear/{destino}', 'create')->name('reservas.create');
+    Route::post('reservas', 'store')->name('reservas.store');
     Route::get('reservas/index', 'index')->name('reservas.index');
 });
 
