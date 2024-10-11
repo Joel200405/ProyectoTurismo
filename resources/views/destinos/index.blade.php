@@ -10,14 +10,14 @@
         <div class="destino-carousel" id="destinoCarousel">
             @foreach ($destinos as $destino)
             <div class="destino-card">
-                <img src="{{ asset('css1/img/' . $destino->imagen_url) }}" alt="{{ $destino->nombre }}">
+                <img src="{{ asset('css/img/' . $destino->imagen_url) }}" alt="{{ $destino->nombre }}">
                 <div class="destino-info">
                     <span class="badge">{{ $destino->categoria }}</span>
                     <h3>{{ $destino->nombre }}</h3>
                     <p>{{ $destino->descripcion }}</p>
                     <div class="precio">
                         <p>S/ {{ $destino->precio }}</p>
-                        <span>Antes: S/ {{ $destino->precio_regular }}</span>
+                        <span>Antes: <del>S/ 500.00</del></span>
                     </div>
                     <button class="add-button">+</button>
                 </div>

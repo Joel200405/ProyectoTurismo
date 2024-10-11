@@ -47,6 +47,14 @@
     transition: transform 0.3s ease;
 }
 
+.destino-info h3 {
+    font-size: 1.2rem; /* Ajusta el tamaño del título */
+    font-weight: bold; /* Negrita */
+    color: #2e2c2c; /* Cambia el color */
+    text-align: center; /* Centra el título */
+    margin-bottom: 20px; /* Añade espacio debajo del título */
+}
+
 /* Solo la imagen se hace más grande */
 .destino-card:hover img {
     transform: scale(1.1);
@@ -55,7 +63,7 @@
 /* Información dentro de las tarjetas */
 .destino-info {
     padding: 15px;
-    text-align: left;
+    text-align: justify;
     color: #333;
 }
 
