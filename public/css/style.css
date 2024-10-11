@@ -1,55 +1,50 @@
 /* Global styling */
 body {
-    font-family: 'Poppins', sans-serif; /* Cambiar a Poppins */
-    background-color: #e6f7ff; /* Azul claro suave para el fondo */
+    font-family: 'Poppins', sans-serif; /* Mantener Poppins */
+    background-color: #e6f7ff; /* Mantener el azul claro */
     color: #333;
     margin: 0;
     padding: 0;
+    font-size: 16px; /* Tamaño base para texto, será escalable */
 }
 
 /* Títulos */
 h4 {
-    font-family: 'Poppins', sans-serif; /* Asegúrate de tener Poppins importado */
     font-weight: 600; /* SemiBold */
-    text-transform: uppercase; /* Mayúsculas */
-    font-size: 24px; /* Tamaño uniforme */
+    text-transform: uppercase;
+    font-size: 24px; /* Tamaño uniforme, mantén el diseño original */
 }
 
 /* Estilos específicos para los títulos */
 .footer-info h4, .footer-contact-form h4 {
-    color: white; /* Color blanco para Contáctenos */
+    color: white; /* Mantener color blanco para Contáctenos */
 }
 
 .crear-destino-title {
-    color: #0077b6; /* Color original de Crear destino */
+    color: #0077b6; /* Mantener color original */
 }
 
 /* Estilo para Déjanos un mensaje */
 .footer-contact-form h4 {
-    color: #0077b6; /* Color igual que Crear destino */
-}
-
-/* Ajustar tamaño */
-h4 {
-    font-size: 24px; /* Tamaño que desees */
+    color: #0077b6; /* Mantener color original */
 }
 
 /* Footer form inputs and button */
 .footer-input, .footer-textarea {
-    width: 100%; /* Asegurar que el ancho sea el mismo */
-    padding: 10px; /* Mantener un padding uniforme */
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif; /* Añadir Poppins */
-    border: 1px solid #0077b6; /* Borde azul */
+    width: 100%;
+    padding: 10px;
+    font-size: 14px; /* Mantén el tamaño */
+    font-family: 'Poppins', sans-serif; /* Mantén Poppins */
+    border: 1px solid #0077b6;
     border-radius: 5px;
     margin-top: 5px;
-    background-color: #e0f7fa;
+    background-color: rgba(241, 248, 255, 0.6);;
     box-sizing: border-box; /* Incluir padding y borde dentro del ancho */
 }
 
 .footer-button {
     width: 100%;
-    background-color: #0077b6;
+    background-color: rgba(0, 119, 182, 0.6);
     color: white;
     padding: 12px 20px;
     font-size: 16px;
@@ -59,19 +54,11 @@ h4 {
     transition: background-color 0.3s ease;
 }
 
-/* Hover effects for button */
 .footer-button:hover {
-    background-color: #005f8d; /* Cambia el color en hover */
+    background-color: rgb(0, 95, 141, 0.6); /* Mantén hover original */
 }
 
 /* Footer styles */
-.footer {
-    background-color: #004b6b; /* Azul oscuro */
-    color: white;
-    padding: 40px 20px;
-    width: 100%;
-    margin-top: 20px;
-}
 
 .footer-container {
     max-width: 1200px;
@@ -86,14 +73,13 @@ h4 {
 .footer-contact-form {
     margin-top: 30px;
     padding: 20px;
-    background-color: #f1f8ff; /* Fondo claro */
+    background-color: rgba(241, 248, 255, 0.4);
     border-radius: 10px;
     width: 100%;
-    max-width: 800px; /* Limitar el ancho máximo */
-    box-sizing: border-box; /* Incluir padding en el ancho total */
+    max-width: 800px;
+    box-sizing: border-box;
 }
 
-/* Copyright styles */
 .footer-copyright {
     margin-top: 20px;
     font-size: 14px;
@@ -103,17 +89,18 @@ h4 {
 
 /* Alert styles */
 .alert {
-    background-color: #d4edda;/* Amarillo dorado */
+    background-color: #d4edda;
     color: #155724;
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 5px;
     text-align: center;
-    display: none; /* Ocultar por defecto */
+    display: none;
     animation: grow 0.5s ease;
     border: 1px solid #c3e6cb;
 }
 
+/* Animación para mostrar alertas */
 @keyframes grow {
     0% {
         transform: scale(0);
@@ -123,12 +110,50 @@ h4 {
     }
 }
 
+/* Media queries para pantallas pequeñas */
 @media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
     .footer-container {
         padding: 0 15px;
     }
 
     .footer-contact-form {
         padding: 15px;
+    }
+
+    h4 {
+        font-size: 20px; /* Reducir ligeramente en pantallas pequeñas */
+    }
+
+    .footer-button {
+        padding: 10px 15px;
+        font-size: 14px; /* Ajustar tamaño del botón */
+    }
+}
+
+/* Media queries para pantallas más grandes */
+@media (min-width: 1200px) {
+    .footer {
+        padding: 60px 40px; /* Aumentar padding en pantallas grandes */
+    }
+
+    h4 {
+        font-size: 28px; /* Aumentar tamaño de títulos */
+    }
+
+    .footer-button {
+        padding: 14px 24px;
+        font-size: 18px; /* Aumentar tamaño de botones en pantallas grandes */
     }
 }

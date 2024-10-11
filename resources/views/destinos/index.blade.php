@@ -1,6 +1,10 @@
 @extends('layouts.general')
 
 @section('content')
+<div class="titulo-container">
+    <h1 class="titulo">TURISMO DE CARHUACAYÁN</h1>
+</div>
+
 <div class="destino-container">
     <div class="destino-carousel-wrapper">
         <div class="destino-carousel" id="destinoCarousel">

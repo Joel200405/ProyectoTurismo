@@ -1,20 +1,28 @@
 /* Contenedor principal */
 .destino-container {
-    position: relative;
+    position: relative; /* Necesario para posicionar los botones */
     width: 100%;
     overflow: hidden;
     padding: 20px;
     background-color: #f7f7f7;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Centrar el carrusel y botones */
 }
 
 /* Carrusel de destinos */
+.destino-carousel-wrapper {
+    position: relative;
+    width: 80%; /* Define el tamaño del espacio donde estarán las tarjetas */
+    overflow: hidden;
+}
+
 .destino-carousel {
     display: flex;
     gap: 15px; /* Espacio entre tarjetas */
     transition: transform 0.4s ease-in-out;
     will-change: transform;
-    width: 100%; /* Asegurarse de que ocupe todo el ancho disponible */
+    width: fit-content;
 }
 
 /* Tarjetas de destino */
@@ -26,15 +34,7 @@
     transition: transform 0.3s ease;
     position: relative;
     cursor: pointer;
-}
-
-/* Carrusel de destinos */
-.destino-carousel {
-    display: flex;
-    gap: 15px; /* Espacio entre tarjetas */
-    transition: transform 0.4s ease-in-out;
-    will-change: transform;
-    width: fit-content;
+    min-width: 300px; /* Ancho mínimo de cada tarjeta */
 }
 
 /* Estilo de las imágenes en las tarjetas */
@@ -56,7 +56,7 @@
 .destino-info {
     padding: 15px;
     text-align: left;
-    color: #333; /* Texto más legible */
+    color: #333;
 }
 
 /* Botón para añadir destinos */
@@ -66,7 +66,7 @@
     right: 10px;
     width: 35px;
     height: 35px;
-    background-color: #28a745;
+    background-color: #0077b6;
     color: white;
     border-radius: 50%;
     border: none;
@@ -79,17 +79,22 @@
 }
 
 .add-button:hover {
-    background-color: #218838;
+    background-color: #005f8d;
 }
 
 /* Botones de navegación */
 .carousel-controls {
-    text-align: center;
-    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%; /* Asegurarse de que los botones estén en los extremos */
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none; /* Para que solo se pueda hacer clic en los botones */
 }
 
 .control-btn {
-    background-color: #0077b6;
+    background-color: #0077b6;;
     border: none;
     color: white;
     font-size: 30px;
@@ -97,16 +102,95 @@
     height: 50px;
     border-radius: 50%;
     cursor: pointer;
-    margin: 0 10px;
     transition: background-color 0.3s;
     font-weight: bold;
+    pointer-events: auto; /* Permite que se haga clic solo en los botones */
+}
+
+/* Botón izquierdo */
+#prevBtn {
+    position: absolute;
+    left: 100px; /* Colocado a la izquierda fuera del contenedor de las tarjetas */
+}
+
+/* Botón derecho */
+#nextBtn {
+    position: absolute;
+    right: 100px; /* Colocado a la derecha fuera del contenedor de las tarjetas */
 }
 
 .control-btn:hover {
-    background-color: #004b6b;
+    background-color: #005f8d;
 }
 
 /* Evitar barra de desplazamiento horizontal */
 html, body {
-    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    overflow-x: hidden;
+}
+
+/* Estilos para el título */
+.titulo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo {
+    font-family: 'Poppins', sans-serif; /* Usamos la misma fuente que el resto del sitio */
+    font-size: 4rem; /* Ajusta según tus necesidades */
+    color: #0077b6;
+    text-shadow: 
+        2px 2px 0px black, /* Borde a la derecha */
+        -2px -2px 0px black, /* Borde a la izquierda */
+        2px -2px 0px black, /* Borde arriba */
+        -2px 2px 0px black; /* Borde abajo */
+    animation: pulse 3s infinite ease-in-out; /* Animación continua */
+}
+
+/* Efecto borroso en el fondo de toda la ventana */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../css/img/Fondo_Destinos.jpg"); /* Imagen correcta */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    /*filter: blur(8px);  Grado de desenfoque */
+}
+
+.destino-container {
+    position: relative; /* Necesario para el posicionamiento del pseudo-elemento */
+    padding: 60px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Asegúrate de que el contenido no sobresalga */
+    z-index: 1; /* Asegúrate de que esté delante del fondo desenfocado */
+}
+
+.destino-container::before {
+    content: ''; /* Necesario para mostrar el pseudo-elemento */
+    position: absolute; /* Posicionarlo relativo al contenedor */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../css/img/Fondo_Lista.jpg"); /* Fondo de imagen */
+    background-size: cover; /* Cubrir toda el área del contenedor */
+    filter: blur(6px); /* Desenfoque */
+    z-index: -1; /* Colocar detrás del contenido */
+}
+
+/* Animación de pulso suave */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+    }
+    100% {
+        transform: scale(1);
+    }
 }
