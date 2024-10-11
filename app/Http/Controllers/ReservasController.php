@@ -10,10 +10,16 @@ use Illuminate\Support\Facades\Auth;
 class ReservasController extends Controller
 {
     //
-    public function index(){
+    public function index(Request $request){
         $destinos = Destino::all();
-        $destinospopulares = Destino::where('popular', true)->get();
-        return view('reservas.indexReserva', compact('destinos', 'destinospopulares'));
+        $destinoSeleccionado = null;
+
+        // Si hay un destino seleccionado en el combo box, cargar los detalles de ese destino
+        if ($request->has('destino_id')) {
+            $destinoSeleccionado = Destino::find($request->input('destino_id'));
+        }
+        
+        return view('reservas.indexReserva', compact('destinos', 'destinoSeleccionado'));
         //return view('reservas.indexReserva');
     }
 
