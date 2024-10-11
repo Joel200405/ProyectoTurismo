@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('destinos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 100);
-            $table->text('descripcion');
+            $table->text('descripcion')->nullable();;
             $table->string('ubicacion')->nullable();
-            $table->decimal('precio', 10, 2);
+            $table->decimal('precio', 10, 2)->nullable();;
             $table->string('imagen_url')->nullable();
             $table->timestamps();
         });

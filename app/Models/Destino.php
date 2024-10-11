@@ -23,10 +23,9 @@ class Destino extends Model
     {   
         //Hacer el proceso y luego guardarlo
         return new Attribute(
-            //Muestra los valores obtenidos (ACCESORES) - Convierte los caracteres en la primera letra mayuscula
-            get: fn($value) => ucwords($value),
-
-            //Captura los valores ingresados en el campo (MUTADORES) - Convierte los caracteres solo a minusculas
+            // Convierte el nombre a mayúsculas al recuperarlo
+            get: fn($value) => ucwords(strtolower($value)), // Primero a minúsculas, luego a capitalizar
+            // Almacena el nombre en minúsculas
             set: fn($value) => strtolower($value) 
         );
     }
