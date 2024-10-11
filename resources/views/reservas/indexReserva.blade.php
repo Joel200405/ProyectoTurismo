@@ -107,129 +107,40 @@
     </div>
 </div>
 
-<section>
-    <h2>Destinos Populares</h2>
-    <div class="popular-content">
-        <img src="{{ asset('css1/img/t6.jpg') }}" alt="">
-        <img src="{{ asset('css1/img/t7.jpg') }}" alt="">
-        <img src="{{ asset('css1/img/t8.jpg') }}" alt="">
-        <img src="{{ asset('css1/img/t9.jpg') }}" alt="">
-        <img src="{{ asset('css1/img/t10.jpg') }}" alt="">
-        <img src="{{ asset('css1/img/t11.jpg') }}" alt="">
-        <img src="{{ asset('css1/img/t12.jpg') }}" alt="">
-    </div>
-</section>
+<div class="destino-detalle">
+    <h2>Selecciona un destino para ver los detalles</h2>
 
-<main class="product container">
+    <!-- Formulario que envía la selección del destino -->
+    <form action="{{ route('reservas.index') }}" method="GET">
+        <select name="destino_id" onchange="this.form.submit()">
+            <option value="" disabled selected>Selecciona un destino</option>
+            @foreach ($destinos as $destino)
+                <option value="{{ $destino->id }}" {{ request('destino_id') == $destino->id ? 'selected' : '' }}>
+                    {{ $destino->nombre }}
+                </option>
+            @endforeach
+        </select>
+    </form>
 
-    <h2>PAQUETES DE TURISMO</h2>
-
-    <div class="product-content">
-        @foreach ($destinos as $destino)
+    <!-- Mostrar detalles del destino seleccionado si existe -->
+    @if ($destinoSeleccionado)
+        <div id="detallesDestino">
+            <img src="{{ asset('css/img/' . $destinoSeleccionado->imagen_url) }}" alt="{{ $destinoSeleccionado->nombre }}">
+            <h3>{{ $destinoSeleccionado->nombre }}</h3>
+            <p><strong>Descripción:</strong> {{ $destinoSeleccionado->descripcion }}</p>
+            <p><strong>Ubicación:</strong> {{ $destinoSeleccionado->ubicacion }}</p>
+            <p><strong>Precio:</strong> ${{ $destinoSeleccionado->precio }}</p>
             
-            <div class="product-1">
-                <img src="{{ asset('css1/img/t13.jpg') }}" alt="">
-                <div class="producto-txt">
-                    <h3> {{ $destino->nombre }} </h3>
-                    <div class="price">
-                        <p> {{ $destino->precio }} </p>
-                        <a href="{{ route('reservas.create', $destino->id) }}" class="btn-2">Contratar</a>
-                    </div>
-                </div>
+            <div class="reservar-btn-container">
+                <button class="reservar-btn">
+                    Reservar
+                </button>
             </div>
+        </div>
+    @endif
 
-            <div class="product-1">
-                <img src="{{ asset('css1/img/t14.jpg') }}" alt="">
-                <div class="producto-txt">
-                    <h3>BAÑOS TERMALES DE COLLPA</h3>
-                    <div class="price">
-                        <p>$500</p>
-                        <a href="#" class="btn-2">Contratar</a>
-                    </div>
-                </div>
-            </div>
+</div>
 
-            <div class="product-1">
-                <img src="{{ asset('css1/img/t15.jpg') }}" alt="">
-                <div class="producto-txt">
-                    <h3>MARCAMARCÁN</h3>
-                    <div class="price">
-                        <p>$500</p>
-                        <a href="#" class="btn-2">Contratar</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-1">
-                <img src="{{ asset('css1/img/t16.jpg') }}" alt="">
-                <div class="producto-txt">
-                    <h3>RESTOS ARQUEOLOGICOS DE COLCAS</h3>
-                    <div class="price">
-                        <p>$500</p>
-                        <a href="#" class="btn-2">Contratar</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-1">
-                <img src="{{ asset('css1/img/t5.jpg') }}" alt="">
-                <div class="producto-txt">
-                    <h3>LA TORTUGA DE QUILLAWAY</h3>
-                    <div class="price">
-                        <p>$500</p>
-                        <a href="#" class="btn-2">Contratar</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-1">
-                <img src="{{ asset('css1/img/t8.jpg') }}" alt="">
-                <div class="producto-txt">
-                    <h3>LAGUNAS DE PURICOCHA</h3>
-                    <div class="price">
-                        <p>$500</p>
-                        <a href="#" class="btn-2">Comprar</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-1">
-                <img src="{{ asset('css1/img/t9.jpg') }}" alt="">
-                <div class="producto-txt">
-                    <h3>LA BELLA DURMIENTE</h3>
-                    <div class="price">
-                        <p>$500</p>
-                        <a href="#" class="btn-2">Comprar</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-1">
-                <img src="{{ asset('css1/img/t3.jpg') }}" alt="">
-                <div class="producto-txt">
-                    <h3>CERRO DE SANTA CLARA</h3>
-                    <div class="price">
-                        <p>$500</p>
-                        <a href="#" class="btn-2">Comprar</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-1">
-                <img src="{{ asset('css1/img/t10.jpg') }}" alt="">
-                <div class="producto-txt">
-                    <h3>LAGUNA DE TUCTOCOCHA</h3>
-                    <div class="price">
-                        <p>$500</p>
-                        <a href="#" class="btn-2">Comprar</a>
-                    </div>
-                </div>
-            </div>
-        
-
-        @endforeach
-
-    </div>
 </main>
 
 @endsection
