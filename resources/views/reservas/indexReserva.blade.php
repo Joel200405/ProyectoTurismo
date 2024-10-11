@@ -132,9 +132,9 @@
             <p><strong>Precio:</strong> ${{ $destinoSeleccionado->precio }}</p>
             
             <div class="reservar-btn-container">
-                <button class="reservar-btn">
-                    Reservar
-                </button>
+
+                <a href=" {{ route('reservas.create', $destinoSeleccionado->id) }} " class="reservar-btn">Reservar</a>
+
             </div>
         </div>
     @endif

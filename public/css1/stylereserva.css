@@ -88,13 +88,14 @@ body {
     align-items: center;
     justify-content: center;
     margin: 100px auto;
-
+    margin-right: 10px;
+    flex: 1;
     width: 100%;
     max-width: 450px;
     backdrop-filter: blur(25px);
     border: 2px solid var(--primary-color);
     border-radius: 15px;
-    padding: 4em 2.5em;
+    padding: 2em 2.5em;
     color: var(--second-color);
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
     background-color: rgba(255, 255, 255, 0.2);
@@ -111,15 +112,17 @@ h2 {
     align-items: flex-start;
     gap: 20px;
     padding: 20px;
-    margin: 100px auto;
+    margin: 0 auto;
     max-width: 1200px;
-    
 }
 
 .info-adicional {
+    flex: 1;
     display: flex;
+    margin: 100px auto;
     width: 100%;
-    padding: 20px;
+    height: auto;
+    padding: 100px;
     max-width: 450px;
     backdrop-filter: blur(25px);
     border: 2px solid var(--primary-color);
@@ -128,7 +131,50 @@ h2 {
     color: var(--second-color);
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
     background-color: rgba(255, 255, 255, 0.2);
-    
+    /*overflow: hidden;*/
+}
+
+.info-adicional h3{
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.destino-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.destino-img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-adicional img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen se ajuste bien sin deformarse */
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .form-container {
+        margin-bottom: 20px;
+    }
+
+    .info-adicional {
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 input, textarea, select {

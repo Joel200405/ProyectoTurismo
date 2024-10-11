@@ -63,13 +63,12 @@
 
         <!-- Información adicional al lado derecho -->
         <div class="info-adicional">
-            <h3>Información Adicional</h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel dolor at urna feugiat aliquet. 
-                Suspendisse potenti. Nulla facilisi. Donec nec eros eget nisl fringilla commodo. Sed sit amet ipsum 
-                ac neque fermentum luctus. Integer at consequat nisl. Pellentesque habitant morbi tristique senectus 
-                et netus et malesuada fames ac turpis egestas.
-            </p>
+            <h3>Información del Destino Seleccionado</h3>
+            <img src="{{ asset('css/img/' . $destino->imagen_url) }}" alt="{{ $destino->nombre }}">
+            <p><strong>Nombre:</strong> {{ $destino->nombre }}</p>
+            <p><strong>Descripción:</strong> {{ $destino->descripcion }}</p>
+            <p><strong>Ubicación:</strong> {{ $destino->ubicacion }}</p>
+            <p><strong>Precio:</strong> ${{ $destino->precio }}</p>
         </div>
     </div>
 @endsection
