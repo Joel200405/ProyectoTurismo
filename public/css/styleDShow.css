@@ -1,0 +1,105 @@
+/* public/css/styleDShow.css */
+
+/* Contenedor principal */
+.detalle-destino-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+}
+
+/* Título */
+.detalle-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.detalle-titulo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+/* Contenedor principal para la imagen y los detalles */
+.detalle-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Imagen del destino */
+.detalle-img {
+    flex: 1;
+    min-width: 300px;
+}
+
+.detalle-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de la información del destino */
+.detalle-info {
+    flex: 1;
+    min-width: 300px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.detalle-info p {
+    margin: 15px 0;
+}
+
+.detalle-info strong {
+    color: #0077b6;
+}
+
+/* Botón de reservar */
+.reservar-btn-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Animación del botón para invitar al clic */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Aplicamos la animación al botón */
+.reservar-btn {
+    animation: pulse 2s infinite; /* Hace que el botón "pulse" constantemente */
+    background-color: #0077b6;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Cuando el usuario pasa el mouse, desactiva la animación y cambia el fondo */
+.reservar-btn:hover {
+    background-color: #005f8d;
+    animation: none; /* Detenemos el "pulso" al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente al pasar el ratón */
+}

@@ -15,11 +15,12 @@ class DestinosController extends Controller
         return view('destinos.index', compact('destinos')); // Asegúrate de que esta vista exista
     }
 
-    // Método para mostrar los detalles de un destino específico
     public function show($id)
     {
-        // Busca el destino por ID
+        // Busca el destino por su ID
         $destino = Destino::findOrFail($id);
-        return view('destinos.show', compact('destino')); // Asegúrate de que esta vista exista
+
+        // Retorna la vista con los detalles del destino
+        return view('destinos.show', compact('destino'));
     }
 }

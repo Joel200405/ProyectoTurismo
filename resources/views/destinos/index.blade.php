@@ -19,7 +19,7 @@
                         <p>S/ {{ $destino->precio }}</p>
                         <span>Antes: <del>S/ 500.00</del></span>
                     </div>
-                    <button class="add-button">+</button>
+                    <button class="add-button" onclick="window.location='{{ route('destinos.show', $destino->id) }}'">+</button>
                 </div>
             </div>
             @endforeach

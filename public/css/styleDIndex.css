@@ -67,25 +67,45 @@
     color: #333;
 }
 
-/* Botón para añadir destinos */
+/* Animación pulse */
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Tamaño original */
+    }
+    50% {
+        transform: scale(1.2); /* Aumenta el tamaño ligeramente */
+    }
+    100% {
+        transform: scale(1); /* Regresa al tamaño original */
+    }
+}
+
+/* Botón para añadir destinos con animación */
 .add-button {
+    animation: pulse 3s infinite; /* Aplicar animación al botón */
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     background-color: #0077b6;
     color: white;
     border-radius: 50%;
     border: none;
-    font-size: 20px;
+    font-size: 40px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
 }
 
+/* Asegurar que el contenido del botón también sea animado */
+.add-button span, .add-button img, .add-button svg {
+    transform: inherit; /* Hacer que el contenido herede la animación */
+}
+
+/* Hover: Cambiar el color del botón */
 .add-button:hover {
     background-color: #005f8d;
 }
@@ -147,10 +167,10 @@ html, body {
     font-size: 4rem; /* Ajusta según tus necesidades */
     color: #0077b6;
     text-shadow: 
-        2px 2px 0px black, /* Borde a la derecha */
-        -2px -2px 0px black, /* Borde a la izquierda */
-        2px -2px 0px black, /* Borde arriba */
-        -2px 2px 0px black; /* Borde abajo */
+        2px 2px 0px white, /* Borde a la derecha */
+        -2px -2px 0px white, /* Borde a la izquierda */
+        2px -2px 0px white, /* Borde arriba */
+        -2px 2px 0px white; /* Borde abajo */
     animation: pulse 3s infinite ease-in-out; /* Animación continua */
 }
 
