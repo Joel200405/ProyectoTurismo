@@ -27,7 +27,7 @@ class loginController extends Controller
             
             //Redirigir segun el tipo de usuario
             if(Auth::user()->is_admin){
-                return redirect()->route('admin.dashboard');
+                return redirect()->route('admin.panel');
             }else{
                 return redirect()->route('home.index');
             }
@@ -36,7 +36,7 @@ class loginController extends Controller
         //Si las credenciales no son validas
         return back()->withErrors([
             'username' => 'Las credenciales proporcionadas no son correctas',
-        ]);
+        ])->onlyInput('username');
 
     }
 }

@@ -16,8 +16,8 @@
                     <h3>{{ $destino->nombre }}</h3>
                     <p>{{ $destino->descripcion }}</p>
                     <div class="precio">
-                        <p>S/ {{ $destino->precio }}</p>
-                        <span>Antes: <del>S/ 500.00</del></span>
+                        <p>$ {{ $destino->precio }}</p>
+                        <span>Antes: <del>$ 500.00</del></span>
                     </div>
                     <button class="add-button" onclick="window.location='{{ route('destinos.show', $destino->id) }}'">+</button>
                 </div>
