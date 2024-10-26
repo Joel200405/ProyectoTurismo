@@ -7,6 +7,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ReservasController;
+use App\Http\Controllers\PaqueteController;
 
 
 //Rutas del login
@@ -42,3 +43,12 @@ Route::controller(ReservasController::class)->group(function(){
 //Rutas para registro de usuarios login
 Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+
+//Admin
+Route::get('/admin', function () {
+    return view('admin');
+})->name('admin.panel')->middleware('auth');
+
+// Rutas para Paquetes
+Route::get('/paquetes/crear', [PaqueteController::class, 'create'])->name('paquetes.create');
+Route::post('/paquetes', [PaqueteController::class, 'store'])->name('paquetes.store');
