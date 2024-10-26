@@ -69,4 +69,10 @@ class ReservasController extends Controller
     {
         $this->middleware('auth');
     }*/
+
+    //para el dashboard
+    public function indexSecond(){
+        $reservas = Reserva::paginate(3);
+        return view('reservas.indexAdmin', compact('reservas'));
+    }
 }

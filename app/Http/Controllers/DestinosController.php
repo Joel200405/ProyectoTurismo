@@ -23,4 +23,9 @@ class DestinosController extends Controller
         // Retorna la vista con los detalles del destino
         return view('destinos.show', compact('destino'));
     }
+
+    public function indexSecond(){
+        $destino = Destino::paginate(3);
+        return view('destinos.indexAdmin', compact('destino'));
+    }
 }
