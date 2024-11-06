@@ -72,7 +72,7 @@ class ReservasController extends Controller
 
     //para el dashboard
     public function indexSecond(){
-        $reservas = Reserva::paginate(3);
+        $reservas = Reserva::paginate(20);
         return view('reservas.indexAdmin', compact('reservas'));
     }
 }

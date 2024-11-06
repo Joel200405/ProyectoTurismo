@@ -44,10 +44,6 @@ Route::controller(ReservasController::class)->group(function(){
 Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
-//Admin
-Route::get('/admin', function () {
-    return view('admin');
-})->name('admin.panel')->middleware('auth');
 
 // Rutas para Paquetes
 Route::get('/paquetes/crear', [PaqueteController::class, 'create'])->name('paquetes.create');

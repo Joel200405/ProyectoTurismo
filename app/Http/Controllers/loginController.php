@@ -27,11 +27,7 @@ class loginController extends Controller
             
             //Redirigir segun el tipo de usuario
             if(Auth::user()->is_admin){
-<<<<<<< HEAD
                 return redirect()->route('admin.index');
-=======
-                return redirect()->route('admin.panel');
->>>>>>> 1b71556ac0a96fb01f8076b47e72c14480c62a3b
             }else{
                 return redirect()->route('home.index');
             }
