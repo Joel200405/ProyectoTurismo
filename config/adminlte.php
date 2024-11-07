@@ -14,8 +14,8 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
-    'title_prefix' => '',
+    'title' => '',
+    'title_prefix' => 'Turismo |',
     'title_postfix' => '',
 
     /*
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Admin</b>Turismo',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -154,8 +154,8 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
@@ -321,6 +321,10 @@ return [
             'can' => 'manage-blog',
         ],
         [
+            'text' => 'Dasboard',
+            'route' => 'admin.index',
+        ],
+        [
             'text' => 'pages',
             'url' => 'admin/pages',
             'icon' => 'far fa-fw fa-file',
@@ -339,20 +343,20 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text' => 'multilevel',
+            'text' => 'Opciones',
             'icon' => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url' => '#',
+                    'text' => 'Reservas',
+                    'url' => '/reservas/dashboard',
                 ],
                 [
-                    'text' => 'level_one',
+                    'text' => 'Destinos',
                     'url' => '#',
                     'submenu' => [
                         [
-                            'text' => 'level_two',
-                            'url' => '#',
+                            'text' => 'Administrar destinos',
+                            'url' => '/dest',
                         ],
                         [
                             'text' => 'level_two',
@@ -362,17 +366,13 @@ return [
                                     'text' => 'level_three',
                                     'url' => '#',
                                 ],
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
                             ],
                         ],
                     ],
                 ],
                 [
-                    'text' => 'level_one',
-                    'url' => '#',
+                    'text' => 'Usuarios',
+                    'url' => '/users',
                 ],
             ],
         ],

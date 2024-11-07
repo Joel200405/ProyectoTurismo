@@ -41,4 +41,9 @@ class RegisterController extends Controller
         return redirect()->route('login.index')->with('success', 'Usuario registrado exitosamente.');
         
     }
+
+    public function users(){
+        $users=User::paginate(3);
+        return view('users', compact('users'));
+    }
 }

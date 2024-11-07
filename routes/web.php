@@ -24,8 +24,10 @@ Route::controller(DestinosController::class)->group(function() {
     Route::get('/destinos/{id}', 'show')->name('destinos.show');
     Route::get('/contact', 'submit')->name('contact.submit');
 
-    Route::get('/destinos/dashboard', 'indexSecond')->name('destinos.admin');
+    Route::get('/dest', 'indexS')->name('destinos.admin');
 });
+
+
 
 //Ruta de contacto
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
@@ -43,6 +45,9 @@ Route::controller(ReservasController::class)->group(function(){
 //Rutas para registro de usuarios login
 Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+
+//Para ver los usuarios en el administrador
+Route::get('/users', [RegisterController::class, 'users'])->name('user.admin');
 
 
 // Rutas para Paquetes

@@ -24,8 +24,8 @@ class DestinosController extends Controller
         return view('destinos.show', compact('destino'));
     }
 
-    public function indexSecond(){
-        $destino = Destino::paginate(3);
-        return view('destinos.indexAdmin', compact('destino'));
+    public function indexS(){
+        $destinos = Destino::paginate(3);
+        return view('destinos.indexAd', compact('destinos'));
     }
 }
