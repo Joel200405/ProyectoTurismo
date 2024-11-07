@@ -6,6 +6,8 @@
 @endsection
 
 @section('content')
+    <button type="button" class="btn btn-warning"><a href="{{route('register.adminindex')}}">Registar Nuevo usuario Admin</a></button>
+    <br>
     <ul>
         <table class="table table-bordered table-hover dataTable dtr-inline collapsed">
             <thead>
@@ -26,6 +28,8 @@
                     <th>{{ $user->username }}</th>
                     <th>{{ $user->google_id }}</th>
                     <th>{{ $user->is_admin }}</th>
+
+                    
                     <th><button type="button" class="btn btn-block btn-warning"><a href="#">Eliminar</a></button></th>
                 </tr>
                 @endforeach

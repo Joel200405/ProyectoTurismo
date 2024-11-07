@@ -25,7 +25,7 @@ class DestinosController extends Controller
     }
 
     public function indexS(){
-        $destinos = Destino::paginate(3);
+        $destinos = Destino::paginate(15);
         return view('destinos.indexAd', compact('destinos'));
     }
 }

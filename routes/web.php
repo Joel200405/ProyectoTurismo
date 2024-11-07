@@ -8,7 +8,7 @@ use App\Http\Controllers\loginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ReservasController;
 use App\Http\Controllers\PaqueteController;
-
+use App\Http\Controllers\UserController;
 
 //Rutas del login
 Route::get('/login', [loginController::class, 'index'])->name('login.index');
@@ -46,8 +46,15 @@ Route::controller(ReservasController::class)->group(function(){
 Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
+//Para user admin
+Route::get('/registerAdmin', [RegisterController::class, 'indexAd'])->name('register.adminindex');
+Route::post('/registerAdmin', [RegisterController::class, 'storeAd'])->name('register.adminstore');
+
 //Para ver los usuarios en el administrador
 Route::get('/users', [RegisterController::class, 'users'])->name('user.admin');
+
+//Eliminar usuario
+Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('user.destroy');
 
 
 // Rutas para Paquetes
