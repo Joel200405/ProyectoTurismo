@@ -63,5 +63,14 @@
         <br>
         <button type="submit">Actualizar formulario</button>
     </form>
+    <!-- BOTON PARA ELIMINAR REGISTRO -->
+    <form action="{{ route('user.destroy', $user) }}" method="POST">
+        <!-- metodos para TOKEN de seguridad y el metodo delete de la ruta -->
+        @csrf
+        @method('delete')
+
+        <button type="submit">Eliminar usuario</button>
+
+    </form>
 </body>
 </html>

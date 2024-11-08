@@ -53,11 +53,12 @@ Route::post('/registerAdmin', [RegisterController::class, 'storeAd'])->name('reg
 //Para ver los usuarios en el administrador
 Route::get('/users', [RegisterController::class, 'users'])->name('user.admin');
 
-//Eliminar usuario
-Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('user.destroy');
 //editar usuario
 Route::get('user/{user}', [UserController::class, 'edit'])->name('user.edit');
 Route::put('user/{user}', [UserController::class, 'update'])->name('user.update');
+
+//Eliminar usuario
+Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('user.destroy');
 
 
 // Rutas para Paquetes

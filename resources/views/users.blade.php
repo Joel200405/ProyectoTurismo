@@ -28,9 +28,6 @@
                     <th>{{ $user->username }}</th>
                     <th>{{ $user->google_id }}</th>
                     <th>{{ $user->is_admin }}</th>
-
-
-                    <th><button type="button" class="btn btn-block btn-warning"><a href="#">Eliminar</a></button></th>
                 </tr>
                 @endforeach
             </tbody>
