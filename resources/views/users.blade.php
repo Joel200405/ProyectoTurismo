@@ -23,13 +23,13 @@
                 @foreach($users as $user)
                 <tr class="bg-primary">
                     <!--<th>{{ $user->id }}</th>-->
-                    <th><button type="button" class="btn btn-block btn-warning"><a href="#">Editar</a></button></th>
+                    <th><button type="button" class="btn btn-block btn-warning"><a href="{{route('user.update', $user)}}">Editar</a></button></th>
                     <th>{{ $user->nombre }}</th>
                     <th>{{ $user->username }}</th>
                     <th>{{ $user->google_id }}</th>
                     <th>{{ $user->is_admin }}</th>
 
-                    
+
                     <th><button type="button" class="btn btn-block btn-warning"><a href="#">Eliminar</a></button></th>
                 </tr>
                 @endforeach
