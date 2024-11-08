@@ -8,7 +8,7 @@ use App\Http\Controllers\loginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ReservasController;
 use App\Http\Controllers\PaqueteController;
-
+use App\Http\Controllers\UserController;
 
 //Rutas del login
 Route::get('/login', [loginController::class, 'index'])->name('login.index');
@@ -24,8 +24,10 @@ Route::controller(DestinosController::class)->group(function() {
     Route::get('/destinos/{id}', 'show')->name('destinos.show');
     Route::get('/contact', 'submit')->name('contact.submit');
 
-    Route::get('/destinos/dashboard', 'indexSecond')->name('destinos.admin');
+    Route::get('/dest', 'indexS')->name('destinos.admin');
 });
+
+
 
 //Ruta de contacto
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
@@ -44,10 +46,20 @@ Route::controller(ReservasController::class)->group(function(){
 Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
-//Admin
-Route::get('/admin', function () {
-    return view('admin');
-})->name('admin.panel')->middleware('auth');
+//Para user admin
+Route::get('/registerAdmin', [RegisterController::class, 'indexAd'])->name('register.adminindex');
+Route::post('/registerAdmin', [RegisterController::class, 'storeAd'])->name('register.adminstore');
+
+//Para ver los usuarios en el administrador
+Route::get('/users', [RegisterController::class, 'users'])->name('user.admin');
+
+//editar usuario
+Route::get('user/{user}', [UserController::class, 'edit'])->name('user.edit');
+Route::put('user/{user}', [UserController::class, 'update'])->name('user.update');
+
+//Eliminar usuario
+Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('user.destroy');
+
 
 // Rutas para Paquetes
 Route::get('/paquetes/crear', [PaqueteController::class, 'create'])->name('paquetes.create');
