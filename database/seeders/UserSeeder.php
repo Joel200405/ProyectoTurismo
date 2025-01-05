@@ -21,5 +21,13 @@ class UserSeeder extends Seeder
             'password' => bcrypt('123456'),
             'is_admin' => false,
         ]);
+
+        //Crear administrados
+        User::create([
+            'nombre' => 'admin',
+            'username' => 'luis',
+            'password' => bcrypt('123456'),
+            'is_admin' => true,
+        ]);
     }
 }
